@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="UTF-8">
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+		<script type = "text/javascript" src = "index.js"></script>
+		<title>Show Uploaded Files</title>
+		<link rel="icon" href="images/book.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="navbar_style.css">
+   </head>
+	
+   <body>
+		<img src="images/library.jpg" alt="Books" style="width:100%;height:300px;"/>
+    	
+		<div id="cssmenu">
+			<ul style="width:36%;margin:auto;">
+			   <li ><a href="javascript:void(0);" title='Show Uploaded Files' class="active"><span>Show Uploaded Files</span></a></li>
+			   <li ><a href="instructor_upload_file.html" title='Upload File'><span>Upload File</span></a></li>
+			   <li ><a href="logout.php" title='logout'><span>Logout</span></a></li>
+			</ul>
+		</div>
+		<br>
+		<table id="table">
+		</table>
+		<script type="text/javascript">getUploadTable();console.log("session id: "+sessionStorage.getItem('ID'));</script>
+
+
+
+   </body>
+	
+</html>

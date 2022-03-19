@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="UTF-8">
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+		<script type = "text/javascript" src = "index.js"></script>
+		<title>Delete Data</title>
+		<link rel="icon" href="images/book.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="navbar_style.css">
+		<style type="text/css">
+		    .insertContainer {
+		        width: 500px;
+		        clear: both;
+		        margin: auto;
+		    }
+		    .insertContainer input {
+		        width: 100%;
+		        clear: both;
+		    }
+	    </style>
+   </head>
+	
+   <body onload="askForDeleteData()">
+		<img src="images/library.jpg" alt="Books" style="width:100%;height:300px;"/>
+    	
+		<div id="cssmenu">
+			<ul style="width:55%;margin:auto;">
+			   <li ><a href="javascript:void(0);" title='Access Data'><span>Access Data</span></a>
+			      <ul>
+			         <li><a href="admin_access_student.html" title="Access Student"><span>Access Students Data</span></a></li>
+			         <li><a href="admin_access_inst.html" title="Access Instructor"><span>Access Instructors Data</span></a></li>
+			         <li><a href="admin_access_course.html" title="Access Course"><span>Access Courses Data</span></a></li>
+			         <li><a href="admin_access_file.html" title="Access Files"><span>Access Files Data</span></a></li>
+			         <li><a href="admin_access_notification.html" title="Access Notifications"><span>Access Notifications Data</span></a></li>
+			      </ul>
+			   </li>
+			   <li ><a href="admin_insert.html" title='Insert Data'><span>Insert Data</span></a></li>
+			   <li ><a href="admin_update.html" title='Update Data'><span>Update Data</span></a></li>
+			   <li ><a href="javascript:void(0);" title='Delete Data' class="active"><span>Delete Data</span></a></li>
+			   <li ><a href="logout.php" title='logout'><span>Logout</span></a></li>
+			</ul>
+		</div>
+		<br>
+		<p >Choose Table: 
+			<select id="selectTable" onchange="askForDeleteData()">
+				<option value="Please choose table" selected>Please Choose Table</option>
+				<option value="Student">Student</option>
+				<option value="Instructor">Instructor</option>
+				<option value="Course">Course</option>
+				<option value="allFiles">Delete All Uploaded Files</option>
+			</select> 
+		</p>
+		<p style="display:none;margin:auto;" id="deleteOption">Select option: 
+			<select id="selectDeleteoption" onchange="askForDeleteData()">
+				<option value="all">Delete All</option>
+				<option value="specific">Delete Specific Entry</option>
+			</select> 
+		</p>
+		<br>
+		<div class='insertContainer'>
+			<p id="insertData"></p>
+		</div>
+		<br>
+		<button id="deleteButton" style="display:none;margin:auto;" onclick="deleteData()">Delete</button>
+
+
+
+   </body>
+	
+</html>
+

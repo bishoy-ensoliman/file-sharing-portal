@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="UTF-8">
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+		<script type = "text/javascript" src = "index.js"></script>
+		<title>Notifications Data</title>
+		<link rel="icon" href="images/book.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="navbar_style.css">
+   </head>
+	
+   <body>
+		<img src="images/library.jpg" alt="Books" style="width:100%;height:300px;"/>
+    	
+		<div id="cssmenu">
+			<ul style="width:55%;margin:auto;">
+			   <li ><a href="javascript:void(0);" title='Access Data' class="active"><span>Access Data</span></a>
+			      <ul>
+			         <li><a href="admin_access_student.html" title="Access Student"><span>Access Students Data</span></a></li>
+			         <li><a href="admin_access_inst.html" title="Access Instructor"><span>Access Instructors Data</span></a></li>
+			         <li><a href="admin_access_course.html" title="Access Course"><span>Access Courses Data</span></a></li>
+			         <li><a href="admin_access_file.html" title="Access Files"><span>Access Files Data</span></a></li>
+			         <li><a href="admin_access_notification.html" title="Access Notifications"><span>Access Notifications Data</span></a></li>
+			      </ul>
+			   </li>
+			   <li ><a href="admin_insert.html" title='Insert Data'><span>Insert Data</span></a></li>
+			   <li ><a href="admin_update.html" title='Update Data'><span>Update Data</span></a></li>
+			   <li ><a href="admin_delete.html" title='Delete Data'><span>Delete Data</span></a></li>
+			   <li ><a href="logout.php" title='logout'><span>Logout</span></a></li>
+			</ul>
+		</div>
+		<br>
+		<table id="table">
+		</table>
+		<script type="text/javascript">getNotfTable();</script>
+
+
+
+
+   </body>
+	
+</html>
+

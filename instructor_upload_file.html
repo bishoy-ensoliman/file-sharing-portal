@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="UTF-8">
+		<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+		<script type = "text/javascript" src = "index.js"></script>
+		<script type = "text/javascript" src = "upload.js"></script>
+		<title>Upload File</title>
+		<link rel="icon" href="images/book.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="navbar_style.css">
+		<link rel="stylesheet" type="text/css" href="w3.css">
+		<style type="text/css">
+		    .insertContainer {
+		        width: 600px;
+		        clear: both;
+		        margin: auto;
+		    }
+		    .insertContainer input {
+		        width: 100%;
+		        clear: both;
+		    }
+	    </style>
+	    <!--loading stuff-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="main.css">
+		<script src="modernizr-2.6.2.min.js"></script>
+
+   </head>
+	
+   <body>
+		<img src="images/library.jpg" alt="Books" style="width:100%;height:300px;"/>
+    	
+		<div id="cssmenu">
+			<ul style="width:36%;margin:auto;">
+			   <li ><a href="instructor_show_files.html" title='Show Uploaded Files' ><span>Show Uploaded Files</span></a></li>
+			   <li ><a href="javascript:void(0);" title='Upload File' class="active"><span>Upload File</span></a></li>
+			   <li ><a href="logout.php" title='logout'><span>Logout</span></a></li>
+			</ul>
+		</div>
+		<br>
+
+  		<!--loading stuff-->
+  		<div id="loader-wrapper" style="display:block;">
+			<div id="loader"></div>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+		<div class='insertContainer' id='insertContainer' style="display:none;">
+			<div id="progBarContainer" class="w3-progress-container w3-round-xlarge w3-pale-green" style="display:none;margin:auto;">
+	    		<div id="progBar" class="w3-progressbar w3-round-xlarge w3-green" style="width:0%">
+	    			<div id="prog" class="w3-center w3-text-black">0%</div>
+	    		</div>
+	  		</div>
+	  		<p style="margin:auto;" id="filesCount"></p>
+			<div style="width:400px;margin:auto;">
+				<p id="courses"></p>
+				<p id="category">Category: 
+					<select id="selectCategory">
+						<option value="Lecture Notes" selected>Lecture Notes</option>
+						<option value="Sheets" >Sheets</option>
+						<option value="References" >References</option>
+						<option value="Assignments" >Assignments</option>
+						<option value="Grades" >Grades</option>
+						<option value="Announcemets" >Announcemets</option>
+					</select>
+				</p>
+				<p>Please Select file or files:
+					<input type="file" id="filestoupload" multiple>
+				</p>
+			</div>
+			<br>
+			<button id="uploadButton" disabled onclick="upload()">Upload</button>
+			<button id="pause" disabled onclick="pause()">Pause</button>
+			<button id="resume" disabled onclick="resume()">Resume</button>
+			<button id="cancel" disabled onclick="cancel()">Cancel</button>
+			<script type="text/javascript">printuploadData();</script>
+			
+		</div>
+
+   </body>
+	
+</html>

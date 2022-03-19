@@ -1,0 +1,43 @@
+.topnav {
+position:relative;
+font-size:17px;
+background-color:#5f5f5f;
+color:#f1f1f1;
+width:98.9%;
+padding:0;
+letter-spacing:1px;
+}
+.topnav a{
+padding:10px 15px 9px 15px !important;
+display:inline-block;
+}
+.topnav li a:hover{
+background-color:#000000;
+color:#ffffff;
+}
+.topnav li a.active {
+background-color:#4CAF50;  
+color:#ffffff;
+}
+.topnav li a:visited { 
+color:#ffffff;
+}
+.topnav li a:link { 
+color:#ffffff;
+}
+
+
+.topnav{box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
+.topnav{font-family:"Segoe UI",Arial,sans-serif}
+.topnav li{float:left}
+.topnav li a{display:block;padding:8px 16px}
+.topnav li a:hover{color:#000;background-color:#ccc}
+
+
+.topnav a{text-decoration:none!important}
+.topnav{padding:8px 8px}
+.topnav a{-webkit-transition:background-color .3s,color .15s,box-shadow .3s,opacity 0.3s,filter 0.3s;transition:background-color .3s,color .15s,box-shadow .3s,opacity 0.3s,filter 0.3s}	
+@media screen and (max-width:600px){.topnav{text-align:center}}
+@media screen and (max-width:601px){.topnav li a{display:inline-block}.topnav li a:first-child{padding:8px 16px}}	
+@media screen and (max-width:600px){.topnav{text-align:left}}
+@media (max-width:600px){.navbar-item{display:none!important}}
